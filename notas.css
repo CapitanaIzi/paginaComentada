@@ -1,0 +1,324 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 85%;
+    /* Ajustamos el ancho para ser más grande */
+    max-width: 1200px;
+    /* Aumentamos el ancho máximo */
+    padding-top: 14px;
+    /* Aumentamos el padding */
+    background-color: #fcf8f8;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(35, 93, 219, 0.733);
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    /* Aumentamos el espacio entre el título y el contenido */
+    color: #333;
+}
+
+/* Editor de notas */
+.editor-notas {
+    margin-bottom: 30px;
+    /* Aumentamos el margen */
+}
+
+/* Campos de texto */
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    /* Aumentamos el padding */
+    font-size: 18px;
+    /* Aumentamos el tamaño de fuente */
+    margin-bottom: 15px;
+    /* Aumentamos el margen entre los campos */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 300px;
+    /* Aumentamos la altura del textarea */
+    resize: none;
+}
+
+/* Botones */
+button {
+    padding: 15px 30px;
+    /* Aumentamos el padding */
+    font-size: 18px;
+    /* Aumentamos el tamaño de fuente */
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#lista-notas {
+    list-style-type: none;
+    padding: 0;
+}
+
+#lista-notas li {
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #f8f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lista-notas li:hover {
+    background-color: #ebe8e8;
+}
+
+/* Botón de eliminar */
+.boton-eliminar {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    /* Aumentamos el tamaño */
+    cursor: pointer;
+    font-size: 16px;
+    /* Aumentamos el tamaño de la fuente */
+    transition: background-color 0.3s;
+}
+
+.boton-eliminar:hover {
+    background-color: #c0392b;
+}
+
+/* Botones de acción */
+.botones {
+    display: flex;
+    gap: 15px;
+    /* Aumentamos el espacio entre los botones */
+}
+
+.boton-agregar {
+    font-size: 30px;
+    /* Aumentamos el tamaño del icono */
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    /* Aumentamos el tamaño del botón */
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.boton-agregar:hover {
+    background-color: #218838;
+}
+#lista-notas li {
+    display: flex;
+    flex-direction: row; /* O asegurarte que el flex-direction sea adecuado */
+}
+
+@media (max-width: 1188px) {
+    #lista-notas li {
+        display: block; /* Cambia el display en pantallas pequeñas */
+    }
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 600px) {
+    .contenedor {
+        width: 95%;
+        /* Ancho más grande para móviles */
+        padding: 15px;
+        /* Reducimos el padding en móviles */
+    }
+
+    input[type="text"],
+    textarea {
+        font-size: 16px;
+        /* Ajustamos el tamaño de fuente */
+    }
+
+    li {
+        flex-direction: column;
+        /* Colocamos el contenido en columna en móviles */
+        align-items: flex-start;
+    }
+
+    .botones {
+        flex-direction: column;
+        /* Colocamos los botones en columna en móviles */
+        gap: 5px;
+    }
+
+    button,
+    .boton-eliminar,
+    .boton-agregar {
+        width: 100%;
+        /* Los botones ocupan todo el ancho en móviles */
+        padding: 10px;
+        /* Ajustamos el padding para móviles */
+        font-size: 14px;
+        /* Reducimos el tamaño de fuente de los botones */
+    }
+
+    /* Ajustamos el tamaño de los botones específicos */
+    .boton-agregar {
+        width: 35px;
+        /* Reducimos el tamaño del botón "+" */
+        height: 35px;
+        font-size: 18px;
+        /* Reducimos el tamaño del icono */
+    }
+
+    .boton-eliminar {
+        font-size: 12px;
+        /* Reducimos el tamaño del texto del botón de eliminar */
+        padding: 5px 10px;
+        /* Reducimos el padding */
+    }
+}
+
+.dark-theme {
+    background-color: #131212;
+    /* Fondo oscuro */
+    color: #f3eded;
+    /* Texto claro */
+}
+
+/* Contenedor principal */
+.dark-theme .contenedor {
+    background-color: #222;
+    /* Fondo oscuro para el contenedor */
+    color: #f3eded;
+    /* Texto claro */
+    box-shadow: 0px 4px 8px rgba(221, 216, 216, 0.76);
+}
+
+/* Títulos */
+.dark-theme h1,
+.dark-theme h2 {
+    color: #f3eded;
+    /* Texto claro para los títulos */
+}
+.dark-theme .editor-notas { 
+    background-color: #333;
+    color: #f3eded;
+    /* Fondo oscuro y texto claro */
+}
+
+.dark-theme input[type="text"],
+.dark-theme textarea {
+    background-color: #444;
+    /* Fondo oscuro para los campos de texto */
+    color: #f3eded;
+    /* Texto claro */
+    border: 1px solid #666;
+    /* Borde gris más oscuro */
+}
+
+.dark-theme button {
+    background-color: #333;
+    /* Fondo oscuro para los botones */
+    color: #f3eded;
+    /* Texto claro */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dark-theme button:hover {
+    background-color: #555;
+    /* Fondo más claro al pasar el ratón */
+}
+
+.dark-theme #lista-notas {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dark-theme #lista-notas li {
+    padding: 20px;
+    margin: 10px 0;
+    background-color: #2c2c2c;
+    /* Fondo oscuro para las notas */
+    border: 1px solid #444;
+}
+
+.dark-theme .boton-eliminar {
+    background-color: #e74c3c;
+    /* Rojo para el botón de eliminar */
+    color: #fff;
+    /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    /* Aumentamos el tamaño */
+    cursor: pointer;
+    font-size: 16px;
+    /* Aumentamos el tamaño de la fuente */
+    transition: background-color 0.3s;
+}
+
+.dark-theme .boton-eliminar:hover {
+    background-color: #c0392b;
+    /* Rojo más oscuro al pasar el ratón */
+}
+
+.dark-theme .botones {
+    display: flex;
+    gap: 15px;
+    /* Aumentamos el espacio entre los botones */
+}
+
+.dark-theme .boton-agregar {
+    font-size: 30px;
+    /* Aumentamos el tamaño del icono */
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    /* Aumentamos el tamaño del botón */
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.dark-theme .boton-agregar:hover {
+    background-color: #218838;
+    /* Verde más oscuro al pasar el ratón */
+}
+
+
+
+

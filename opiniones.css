@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+  }
+  
+  #seccionOpiniones {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  button[type="submit"] {
+    background-color: #7db9fd;
+    color: rgb(24, 23, 23);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #5fadee;
+    /* Color más oscuro al pasar el cursor */
+    transform: scale(1.1);
+    /* Aumenta ligeramente el tamaño */
+    color: #f1f1f1;
+  }
+  
+  .opinion {
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #c8e5f5;
+    border-radius: 5px;
+  }
+  
+  .opinion strong {
+    font-weight: bold;
+  }
+  
+  .dark-theme {
+    background-color: #131212;
+    color: #f3eded;
+  }
+  
+  
+  .dark-theme #seccionOpiniones {
+    border: 1px solid #555;
+    background-color: #222;
+  }
+  
+  .dark-theme textarea {
+    border: 1px solid #444;
+    background-color: #444;
+    color: #f3eded;
+  }
+  
+  .dark-theme button[type="submit"] {
+    background-color: #5495df;
+    color: rgb(10, 10, 10);
+  }
+  
+  .dark-theme button[type="submit"]:hover {
+    background-color: #428dca;
+    transform: scale(1.1);
+    color: #f5eeee;
+  }
+  
+  .dark-theme .opinion {
+    background-color: #333;
+    color: #f3eded;
+  
+  }

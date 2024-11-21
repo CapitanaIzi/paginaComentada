@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro </title>
+    <link rel="stylesheet" href="encabezado.css">
+    <link rel="stylesheet" href="registro.css">
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="menuPrincipal">
+            <svg id="menu-icon" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </label>
+        <a href="index.html" class="enlace">
+            <div class="logo-container">
+                <img id="logo" src="imagenes/logo terminado.png" alt="logo" class="logo">
+                <h1 class="nombre-marca">Iziel</h1>
+            </div>
+        </a>
+        <ul>
+
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="diagrama.html">Diagrama </a></li>
+            <li><a href="notas.html">Notas</a></li>
+            <li><a href="registro.html">Registrarse</a></li>
+            <li><a href="#" id="toggleAppearance">Tema Claro</a></li>
+            <li><a href="opiniones.html">Opiniones</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section class="form-section" id="registroSection">
+            <form id="registroForm" aria-labelledby="registroTitle">
+                <h2 id="registroTitle">Registrarse</h2>
+                <label for="nombre" aria-label="Ingresa tu nombre completo">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+
+                <label for="email" aria-label="Ingresa tu correo electrónico">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="Escribe tu correo">
+
+                <label for="password" aria-label="Ingresa tu contraseña">Contraseña:</label>
+                <input type="password" id="password" name="password" required placeholder="Escribe tu contraseña">
+
+                <button type="submit" class="btn" aria-label="Registrarse">Registrarse</button>
+            </form>
+
+            <div id="registroExitoso" style="display:none;">
+                <h2>¡Registro exitoso!</h2>
+                <p>Gracias por registrarte. Ya puedes comenzar a usar la aplicación.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="RegistroApp.js"></script>
+    <script src="InteraccionesPagina.js"></script>
+
+
+
+</body>
+
+</html>

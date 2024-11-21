@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloc de Notas</title>
+    <link rel="stylesheet" href="encabezado.css">
+    <link rel="stylesheet" href="notas.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox"id="check">
+        <label for="check" class="menuPrincipal">
+            <svg id="menu-icon"  viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </label>
+            <a href="index.html"class="enlace">
+                <div class="logo-container">
+                    <img id="logo" src="imagenes/logo terminado.png" alt="logo" class="logo">
+                    <h1 class="nombre-marca">Iziel</h1>
+                </div>
+                </a>
+            <ul>
+
+                <li><a href="listas.html">Listas</a></li>
+                <li><a href="diagrama.html">Diagrama </a></li>
+                <li><a href="notas.html">Notas</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+                <li><a href="#" id="toggleAppearance">Tema Claro</a></li>
+                <li><a href="opiniones.html">Opiniones</a></li>
+            </ul>
+        </nav>
+        <div class="contenedor">
+            <h1>Bloc de Notas</h1>
+            <div class="editor-notas">
+                <input type="text" id="titulo-nota" placeholder="Título de la nota" />
+                <textarea id="contenido-nota" placeholder="Escribe tu nota aquí..."></textarea>
+                <div class="botones">
+                    <button id="guardar-nota">Guardar Nota</button>
+                    <button class="boton-agregar" id="agregar-nota">+</button>
+                </div>
+            </div>
+            <h2>Notas Guardadas</h2>
+            <ul id="lista-notas"></ul>
+    </div>
+    <script src="NotaApp.js"></script>
+    <script src="InteraccionesPagina.js"></script>
+
+</body>
+</html>

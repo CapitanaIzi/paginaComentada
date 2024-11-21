@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pendientes</title>
+    <link rel="stylesheet" href="encabezado.css">
+    <link rel="stylesheet" href="listas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="calendarioLista.css">
+    <link rel="stylesheet" href="oscuroLista.css">
+    <link rel="stylesheet" href="responsiveLista.css">
+
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="menuPrincipal">
+            <svg id="menu-icon" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </label>
+        <a href="index.html" class="enlace">
+            <div class="logo-container">
+                <img id="logo" src="imagenes/logo terminado.png" alt="logo" class="logo">
+                <h1 class="nombre-marca">Iziel</h1>
+            </div>
+        </a>
+        <ul>
+
+            <li><a href="listas.html">Listas</a></li>
+            <li><a href="diagrama.html">Diagrama </a></li>
+            <li><a href="notas.html">Notas</a></li>
+            <li><a href="registro.html">Registrarse</a></li>
+            <li><a href="#" id="toggleAppearance">Tema Claro</a></li>
+            <li><a href="opiniones.html">Opiniones</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Listas de Pendientes</h1>
+        <button id="btn-guardar">Guardar</button>
+        <div class="buttons">
+            <button id="btn-personal">Personal</button>
+            <button id="btn-semanal">Semanal</button>
+            <button id="btn-mensual">Mensual</button>
+            <button id="btn-calendario">
+                <i class="fas fa-calendar"></i> Calendario
+            </button>
+            <div id="calendar-container">
+                <button id="cerrar-calendario">&times;</button>
+            </div>
+            
+        </div>
+
+        <div class="container">
+            <h2 class="non-editable-title">Lista Personal</h2>
+            <div class="listas-basicas" id="listas-personales"></div>
+            <div class="linea-guia"></div>
+        </div>
+
+        <div class="container">
+            <h2 class="non-editable-title">Lista Semanal</h2>
+            <div class="listas-basicas-container">
+                <div class="listas-basicas" id="lista-semanal">
+                    <div class="linea-guia"></div>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2 class="non-editable-title">Lista por Mes</h2>
+                <div class="listas-basicas" id="listas-mes"></div>
+                <div class="linea-guia"></div>
+
+            </div>
+
+        </div>
+
+    </main>
+    <script src="InteraccionesPagina.js"></script>
+    <script src="Listas.js"></script>
+    <script src="Tarea.js"></script>
+    <script src="ListaSemanal.js"></script>
+    <!-- Cargar jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Cargar Moment.js (dependencia de FullCalendar) -->
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+
+    <!-- Cargar FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
+
+    <!-- Cargar archivo de traducción español -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/locale/es.js"></script>
+
+    <script src="Calendario.js"></script>
+    <script src="GestorExpandirContraer.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>

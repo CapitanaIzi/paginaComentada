@@ -1,0 +1,110 @@
+/* Estilos específicos para el tema oscuro */
+body.dark-theme {
+    background-color: #1b1b1b;
+    color: #f0f0f0;
+}
+.dark-theme .container {
+    background-color: #1b1b1b;
+    color: #f0f0f0;
+}
+.dark-theme .non-editable-title {
+    background-color: #1f1e1e;
+    color: #fff9f9;
+}
+.dark-theme .listas-basicas {
+    background-color: #1b1b1b;
+}
+.dark-theme .editable-title {
+    background-color: rgb(121, 117, 117);
+    color: #141313;
+    border: none;
+}
+.dark-theme .editable-title::placeholder {
+    color: rgb(41, 40, 40);
+    opacity: 1;
+}
+.dark-theme .bloque {
+    background-color: #1b1b1b;
+    border: 1px solid #7e7c7c;
+    border-radius: 5px;
+}
+.dark-theme .lista-basica {
+    background-color: rgb(117, 117, 119);
+    border: 1px solid #afadad;
+}
+
+.dark-theme .lista-basica input::placeholder {
+    color: rgb(37, 35, 35);
+}
+.dark-theme .tarea textarea {
+    color: rgb(10, 10, 10);
+}
+
+.dark-theme .tarea textarea::placeholder {
+    color: #c2bbbb;
+    opacity: 1;
+}
+.dark-theme .tarea textarea.tachado {
+    color: rgb(75, 74, 74);
+}
+.dark-theme button {
+    background-color: #5495df;
+    color: rgb(19, 18, 18);
+    border: 1px solid #ccc;
+}
+.dark-theme button:hover {
+    background-color: #428dca;
+    color: #f0eaea;
+}
+.dark-theme .menu-lista,
+.dark-theme .menuTarea {
+    background-color: #74aae4;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.dark-theme .tarea button {
+    color: #f9f9f9;
+    background: none;
+    border: none;
+}
+
+.dark-theme .destacada {
+    background-color: #2098dd;
+}
+
+
+/* Estilos del calendario en el tema oscuro */
+.dark-theme #calendar-container {
+    background-color: #011a53;
+    color: #f7f1f1;
+    box-shadow: 4px 14px 38px rgba(126, 125, 125, 0.952);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.dark-theme .fc-toolbar {
+    background-color: #164899;
+    color: #fff;
+}
+
+.dark-theme .fc-button {
+    background-color: #89b5f1;
+    color: #0a17d6;
+    border: none;
+}
+
+.dark-theme .fc-button:hover {
+    background-color: #bebfc0;
+}
+
+.dark-theme .fc-day {
+    background-color: #7c7d80;
+    color: #faf3f3;
+}
+
+.dark-theme .fc-today {
+    background-color: #0673e0 !important;
+    color: #f3f0f0;
+}

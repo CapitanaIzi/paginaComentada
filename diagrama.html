@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa Conceptual Interactivo</title>
+    <link rel="stylesheet" href="diagrama.css">
+    <link rel="stylesheet" href="encabezado.css">
+
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox"id="check">
+        <label for="check" class="menuPrincipal">
+            <svg id="menu-icon"  viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path d="M4 6H20M4 12H20M4 18H20" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </label>
+            <a href="index.html"class="enlace">
+                <div class="logo-container">
+                    <img id="logo" src="imagenes/logo terminado.png" alt="logo" class="logo">
+                    <h1 class="nombre-marca">Iziel</h1>
+                </div>
+                </a>
+            <ul>
+
+                <li><a href="listas.html">Listas</a></li>
+                <li><a href="diagrama.html">Diagrama </a></li>
+                <li><a href="notas.html">Notas</a></li>
+                <li><a href="registro.html">Registrarse</a></li>
+                <li><a href="#" id="toggleAppearance">Tema Claro</a></li>
+                <li><a href="opiniones.html">Opiniones</a></li>
+            </ul>
+        </nav>
+        <h1 id="titulo-diagrama">Diagrama Conceptual</h1>
+    <!-- Barra superior con la opción Insertar -->
+    <div id="barra-superior">
+        <button id="btn-guardar">Guardar</button>
+        <button id="btn-insertar">Insertar</button>
+        <div class="menu" id="menu-insertar">
+            <button id="insertar-cuadro">Cuadro</button>
+            <button id="insertar-flecha">Flecha</button>
+        </div>
+        <button id="btn-editar">Editar</button>
+        <div class="menu" id="menu-editar">
+            <button id="btn-color">Color</button>
+            <div class="menu" id="menu-color">
+                <div class="color-grid">
+                    <button class="color-option" data-color="#FFB6C1" style="background-color: #FFB6C1;"></button>
+                    <button class="color-option" data-color="#90EE90" style="background-color: #90EE90;"></button>
+                    <button class="color-option" data-color="#e6e211f6" style="background-color: #e6e211f6;"></button>
+                    <button class="color-option" data-color="#8fddf7" style="background-color: #8fddf7;"></button>
+                    <button class="color-option" data-color="#9f9fe4" style="background-color: #9f9fe4;"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contenedor para el mapa conceptual -->
+    <div id="mapa-conceptual"><!-- Título editable en el centro del mapa conceptual -->
+        <div id="titulo" contenteditable="true"></div>
+        <span id="titulo-placeholder">Ingrese título</span>
+        <!-- Botón Eliminar dentro del mapa conceptual -->
+        <button id="btn-eliminar">Eliminar</button>
+    </div>
+    <script src="InteraccionesPagina.js"></script>
+    <script src="CuadroDiagrama.js"></script>
+    <script src="FlechaDiagrama.js"></script>
+    <script src="diagrama.js"></script>
+
+   
+
+</body>
+
+</html>
