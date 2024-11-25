@@ -1,0 +1,228 @@
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    margin-top: 80px;
+    /* Espacio suficiente para que no quede cubierto por el header fijo */
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    font-weight: bold;
+    /* Aumenta la negrita */
+    color: #4287f5;
+    /* Color más fuerte */
+}
+
+p {
+    font-size: 1.2em;
+    color: #666;
+}
+
+
+.carousel {
+    position: relative;
+    width: 56%;
+    height: 400px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+    background-color: #fff;
+    /* Fondo blanco */
+    border: 2px solid #f0f0f0;
+    /* Borde gris claro */
+    transition: transform 0.3s ease-in-out;
+    /* Transición suave */
+}
+
+.carousel:hover {
+    transform: scale(1.02);
+    /* Efecto de zoom al pasar el cursor */
+}
+/* Contenedor de contenido */
+/* Estilo para la imagen y el contenido */
+.carousel-item {
+    justify-content: center;
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.carousel-item.active {
+    display: flex;
+    align-items: center;
+   
+    padding: 0px 30px;
+
+}
+.carousel-content {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 58px;
+    color: #333;
+    /* Color de texto */
+    font-family: 'Arial', sans-serif;
+    /* Fuente elegante */
+    justify-content: center;
+
+}
+.carousel-image {
+    width: 50%;
+    padding: 15px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.carousel-item.active svg {
+    width: 200px;
+    /* Cambia este valor según el tamaño deseado */
+    height: 200px;
+    /* Aumenta este valor también */
+}
+/* SVG personalizados */
+.carousel-item.active .svg-top svg {
+    margin-bottom: 10px;
+    width: 140px;
+    height: 140px;
+    transition: all 0.3s ease;
+}
+
+.carousel-item.active .svg-bottom svg {
+    display: flex;
+    gap: 10px;
+    /* Espacio entre los dos SVG inferiores */
+    justify-content: center;
+    /* Centra los dos SVG en la fila */
+    width: 75px;
+    height: 75px;
+    transition: all 0.3s ease;
+}
+
+.carousel-description {
+    justify-content: left;
+    width: 40%;
+    padding: 55px;
+}
+
+
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(36, 81, 204, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+button:hover {
+    background-color: #5f7ee6;
+}
+
+
+.dark-theme {
+    background-color: #131212;
+    color: #f3eded;
+}
+
+.dark-theme .container {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.dark-theme h1 {
+    color: #e0e0e0;
+}
+
+.dark-theme .highlight {
+    font-weight: bold;
+    /* Aumenta la negrita */
+    color: #3c90d4;
+    /* Color amarillo dorado brillante para destacar la palabra */
+}
+
+.dark-theme p {
+    color: #cec8c8;
+}
+.dark-theme .carousel-description p {
+    color: #1b1b1b; /* Color del texto */
+}
+.dark-theme .carousel {
+    background-color: #a5a2a2;
+    border: 2px solid #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+.dark-theme .carousel:hover {
+    transform: scale(1.02);
+}
+.dark-theme .carousel-content {
+    color: #e0e0e0;
+}
+.dark-theme button {
+    background-color: rgba(85, 85, 85, 0.7);
+}
+.dark-theme button:hover {
+    background-color: #666;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .carousel {
+        width: 98%;
+        height: 300px;
+    }
+
+    .carousel-description {
+        font-size: 0.9rem;
+
+    }
+    .container {
+        padding: 0px;
+        width: 100%;
+       
+    }
+    
+}
+
+@media (max-width: 360px) {
+    .carousel {
+        width: 95%;
+        height: 250px;
+    }
+
+    .carousel-description {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
