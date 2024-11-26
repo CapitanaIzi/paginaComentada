@@ -10,6 +10,7 @@ class Diagrama {
         this.btnColor = document.getElementById('btn-color');
         this.menuColor = document.getElementById('menu-color');
         this.titulo = document.getElementById('titulo');
+        this.tituloPlaceholder = document.getElementById('titulo-placeholder');
         this.isMouseDown = false;
         this.init();
     }
@@ -34,12 +35,27 @@ class Diagrama {
     }
 
     init() {
+        this.configurarTitulo();
         this.configurarEventos();
         this.configurarMenu();
         this.configurarColor();
         this.seleccionarCuadroActivo();
+        this.configurarEventoEliminar();
     }
+    /**
+        * Configura el comportamiento del título y su placeholder.
+        */
+    configurarTitulo() {
+        this.titulo.addEventListener('focus', () => {
+            this.tituloPlaceholder.style.display = 'none';
+        });
 
+        this.titulo.addEventListener('blur', () => {
+            if (!this.titulo.innerText.trim()) {
+                this.tituloPlaceholder.style.display = 'inline';
+            }
+        });
+    }
     /**
      * configura los eventos de click respecto a cuadro, flecha 
      */
@@ -47,7 +63,6 @@ class Diagrama {
         this.seleccionarCuadroActivo();
         document.getElementById('insertar-cuadro').addEventListener('click', () => this.crearCuadro());
         document.getElementById('insertar-flecha').addEventListener('click', () => this.crearFlecha());
-        this.configurarEventoEliminar();
     }
 
     /**
@@ -83,7 +98,7 @@ class Diagrama {
      */
     configurarEventoEliminar() {
         let elementoMoviendose = null;
-    
+
         // Detectar inicio del arrastre
         document.addEventListener('mousedown', (e) => {
             if (e.target.classList.contains('cuadro') || e.target.classList.contains('flecha')) {
@@ -91,14 +106,14 @@ class Diagrama {
                 elementoMoviendose = e.target;
             }
         });
-    
+
         // Detectar el movimiento del elemento
         document.addEventListener('mousemove', (e) => {
             if (this.isMouseDown && elementoMoviendose) {
                 elementoMoviendose.style.position = 'absolute';
                 elementoMoviendose.style.left = `${e.pageX - elementoMoviendose.offsetWidth / 2}px`;
                 elementoMoviendose.style.top = `${e.pageY - elementoMoviendose.offsetHeight / 2}px`;
-    
+
                 // Evaluar si el elemento está sobre el botón eliminar
                 const rectEliminarBtn = this.eliminarBtn.getBoundingClientRect();
                 const rectElemento = elementoMoviendose.getBoundingClientRect();
@@ -108,7 +123,7 @@ class Diagrama {
                 }
             }
         });
-    
+
         // Detectar fin del arrastre
         document.addEventListener('mouseup', () => {
             this.isMouseDown = false;

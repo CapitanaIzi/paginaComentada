@@ -183,8 +183,7 @@ h1 {
     background-color: blue;
     /* Color del control de rotación */
     border-radius: 50%;
-    cursor: url('images/rotate-cursor.png'), auto;
-    /* Cambiar el cursor si es necesario */
+    cursor:auto;
     transform: translateY(-50%);
     /* Centrar verticalmente el control */
 }

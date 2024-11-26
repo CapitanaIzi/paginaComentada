@@ -25,7 +25,9 @@ h1 {
     color: #4287f5;
     /* Color más fuerte */
 }
-
+a{
+    text-decoration: none;
+}
 p {
     font-size: 1.2em;
     color: #666;

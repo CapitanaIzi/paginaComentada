@@ -1,0 +1,298 @@
+@media (max-width: 865px) {
+    #calendar-container {
+        width: 90%;
+        max-width: 100%;
+        height: 85%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fc-view {
+        width: 100%;
+        height: 75%;
+    }
+
+    #calendar-container table {
+        width: 98%;
+        height: auto;
+        background-color: rgb(171, 225, 250);
+        text-align: center;
+    }
+
+    .fc-body {
+        background-color: rgb(252, 237, 237);
+        height: auto;
+    }
+
+    .fc-month-view {
+        font-size: 1rem;
+        padding: 0;
+        height: auto;
+    }
+
+    .fc-daygrid-day {
+        font-size: 1rem;
+        padding: 5px;
+        height: auto;
+    }
+}
+
+@media (max-width: 660px) {
+    main {
+        width: 100%;
+        height: auto;
+        margin-right: 20px;
+        padding: 0 5px;
+    }
+
+    .contenedor {
+        width: 90%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .buttons {
+        width: 70%;
+        max-width: 250px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .buttons button {
+        font-size: 10px;
+        padding: 4px 8px;
+        width: auto;
+        line-height: 1.2;
+        box-sizing: border-box;
+    }
+
+    .fc-toolbar.fc-header-toolbar {
+        margin-top: 9px;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 5px 10px !important;
+        font-size: 16px !important;
+        height: auto !important;
+    }
+
+    .fc-prev-button,
+    .fc-next-button {
+        font-size: 18px !important;
+        padding: 5px 3px !important;
+    }
+
+    .fc-today-button {
+        font-size: 18px !important;
+        padding: 5px 7px !important;
+
+    }
+
+    #calendar-container {
+        top: 120px;
+        padding: 0px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        /* Ajustamos la altura */
+        overflow: hidden !important;
+        margin: 0 auto !important;
+    }
+
+    .fc-view-container {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        /* Asegura que las celdas se distribuyan correctamente */
+        overflow: visible !important;
+    }
+
+    .fc-month-view {
+        font-size: 14px !important;
+        padding: 10px !important;
+        height: auto !important;
+        overflow: visible !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        /* Hacemos que las filas se acomoden */
+    }
+
+    .fc-daygrid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        /* Permite que los días se acomoden en filas */
+        gap: 5px;
+    }
+
+    .fc-daygrid-day {
+        font-size: 14px !important;
+        padding: 5px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% / 7);
+        /* Distribuir el calendario en 7 columnas */
+        min-height: 60px !important;
+        /* Altura mínima para las celdas */
+        height: auto !important;
+        /* Aseguramos que se ajuste al contenido */
+    }
+
+    .fc-daygrid-day-number {
+        font-size: 12px !important;
+    }
+
+    .fc-event {
+        font-size: 12px !important;
+        padding: 4px !important;
+    }
+
+    #cerrar-calendario {
+        top: -2px !important;
+        right: 5px;
+
+    }
+
+}
+
+@media (max-width: 387px) {
+    h1 {
+        font-size: 30px;
+        margin-bottom: 0;
+        margin-top: 3px;
+    }
+
+    .buttons {
+        max-width: 850px;
+        margin: 20px auto;
+        display: flex;
+        margin-top: 0px;
+        margin-bottom: 50;
+    }
+
+    .buttons button {
+        width: 100%;
+        padding: 5px 5px;
+        font-size: 15px;
+        margin: 4px 0;
+    }
+
+    #btn-guardar {
+        margin-top: 55px;
+        width: auto;
+        padding: 6px 10px;
+        font-size: 12px;
+        left: 12px;
+    }
+
+    input[type="text" i] {
+        padding-block: 1px;
+        padding-inline: 2px;
+        position: relative;
+        font-size: 14px;
+    }
+
+    .menu-lista {
+        position: absolute;
+        width: 45px;
+        top: 0px;
+        right: -50px;
+    }
+
+
+    .fc-toolbar.fc-header-toolbar {
+        margin-top: 3px;
+        padding: 3px 5px !important;
+        font-size: 13px !important;
+        height: auto !important;
+        display: flex !important;
+        justify-content: space-between;
+    }
+
+    .fc-button-group {
+        font-size: 0px !important;
+        display: flex;
+        /* Flexbox dentro del grupo de botones */
+        gap: 2px;
+    }
+
+    .fc-today-button {
+        flex-shrink: 0;
+        /* Evita que el botón "Hoy" se reduzca más de lo necesario */
+        width: auto;
+        /* Hace que el ancho del botón "Hoy" se ajuste al contenido */
+        max-width: 42px;
+
+
+    }
+
+    .fc-prev-button,
+    .fc-next-button {
+        font-size: 15px !important;
+        padding: 5px 3px !important;
+    }
+
+    #calendar-container {
+        top: 120px;
+        padding: 0px !important;
+        width: 97% !important;
+        max-width: 99% !important;
+        height: auto !important;
+        /* Ajustamos la altura */
+        overflow: hidden !important;
+        margin: 0 auto !important;
+    }
+
+    .fc-view-container {
+        width: 100% !important;
+        height: auto !important;
+        display: block !important;
+        /* Asegura que las celdas se distribuyan correctamente */
+        overflow: visible !important;
+    }
+
+    .fc-month-view {
+        font-size: 14px !important;
+        padding: 10px !important;
+        height: auto !important;
+        overflow: visible !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        /* Hacemos que las filas se acomoden */
+    }
+
+    .fc-daygrid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        /* Permite que los días se acomoden en filas */
+        gap: 5px;
+    }
+
+    .fc-daygrid-day {
+        font-size: 14px !important;
+        padding: 5px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .fc-daygrid-day-number {
+        font-size: 12px !important;
+    }
+
+    .fc-event {
+        font-size: 12px !important;
+        padding: 4px !important;
+    }
+
+
+    #cerrar-calendario {
+        right: 0px !important;
+        top: -13px !important;
+
+    }
+
+}
