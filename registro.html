@@ -1,10 +1,11 @@
+<!-- registro.html -->
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro </title>
+    <title>Registro e Inicio de Sesión</title>
     <link rel="stylesheet" href="encabezado.css">
     <link rel="stylesheet" href="registro.css">
 </head>
@@ -26,7 +27,6 @@
             </div>
         </a>
         <ul>
-
             <li><a href="listas.html">Listas</a></li>
             <li><a href="diagrama.html">Diagrama </a></li>
             <li><a href="notas.html">Notas</a></li>
@@ -35,33 +35,53 @@
             <li><a href="opiniones.html">Opiniones</a></li>
         </ul>
     </nav>
-    <div class="container">
-        <section class="form-section" id="registroSection">
-            <form id="registroForm" aria-labelledby="registroTitle">
-                <h2 id="registroTitle">Registrarse</h2>
-                <label for="nombre" aria-label="Ingresa tu nombre completo">Nombre:</label>
+    <div class="contenedorRegistro">
+        <section id="seccionRegistro">
+            <form id="formularioRegistro">
+                <h2>Registrarse</h2>
+                <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
 
-                <label for="email" aria-label="Ingresa tu correo electrónico">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required placeholder="Escribe tu correo">
+                <label for="correoRegistro">Correo Electrónico:</label>
+                <input type="email" id="correoRegistro" name="correoRegistro" required placeholder="Escribe tu correo">
 
-                <label for="password" aria-label="Ingresa tu contraseña">Contraseña:</label>
-                <input type="password" id="password" name="password" required placeholder="Escribe tu contraseña">
+                <label for="contrasenaRegistro">Contraseña:</label>
+                <input type="password" id="contrasenaRegistro" name="contrasenaRegistro" required
+                    placeholder="Escribe tu contraseña">
 
-                <button type="submit" class="btn" aria-label="Registrarse">Registrarse</button>
+                <label for="confirmarContrasena">Confirmar Contraseña:</label>
+                <input type="password" id="confirmarContrasena" name="confirmarContrasena" required
+                    placeholder="Confirma tu contraseña">
+
+                <button type="submit" class="boton">Registrarse</button>
             </form>
-
-            <div id="registroExitoso" style="display:none;">
-                <h2>¡Registro exitoso!</h2>
-                <p>Gracias por registrarte. Ya puedes comenzar a usar la aplicación.</p>
-            </div>
         </section>
     </div>
+    <div class="contenedorInicioSesion">
+        <section id="seccionInicioSesion">
+            <form id="formularioInicioSesion">
+                <h2>Iniciar Sesión</h2>
+                <label for="correoInicioSesion">Correo Electrónico:</label>
+                <input type="email" id="correoInicioSesion" name="correoInicioSesion" required
+                    placeholder="Escribe tu correo">
 
+                <label for="contrasenaInicioSesion">Contraseña:</label>
+                <input type="password" id="contrasenaInicioSesion" name="contrasenaInicioSesion" required
+                    placeholder="Escribe tu contraseña">
+
+                <button type="submit" class="boton">Iniciar Sesión</button>
+            </form>
+        </section>
+    </div>
+    <div class="contenedorBienvenida">
+        <section id="seccionBienvenida" >
+            <h1 id="mensajeBienvenida">Bienvenido <span id="nombreUsuario"></span> a <span
+                    class="highlight">IZIEL</span></h1>
+            <button id="cerrarSesion">Cerrar sesión</button>
+        </section>
+    </div>
     <script src="RegistroApp.js"></script>
     <script src="InteraccionesPagina.js"></script>
-
-
 
 </body>
 
